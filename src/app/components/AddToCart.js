@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { useCart } from "@/app/components/cart-provider";
 import { Toaster } from "@/components/ui/toaster"
 import { useToast } from "@/components/ui/use-toast"
+import "../../app/globals.css";
+
 
 
 
@@ -34,7 +36,7 @@ export const AddToCart = ({id, title,image,price}) => {
 
   return (
     <div>
-    <Button onClick={()=>addToCart(id,title,image,price)} variant="outline">ADD TO CART</Button>
+    <Button onClick={()=>addToCart(id,title,image,price)} variant="outline" className="button_slide hover:text-white">ADD TO CART</Button>
     <Toaster />
     </div>
   )

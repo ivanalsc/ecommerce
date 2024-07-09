@@ -15,21 +15,25 @@ import {
   } from "@/components/ui/card"
   import Image from "next/image";
   import Link from "next/link";
+import "../../app/globals.css";
 
 
   
 
 
-const Shelf = async() => {
+const PdpShelf = async({id}) => {
   const response = await fetch('https://fakestoreapi.com/products/category/jewelery')
 const products = await response.json();
 
   return (
-    <Carousel className="w-full bg-white p-8 max-w-7xl m-auto ">
+    <Carousel className="w-full bg-white p-8">
     <CarouselContent>
       {products.map((product) => (
-        <CarouselItem key={product.id} className="md:basis-1/4 ">
+        
+        <CarouselItem key={product.id} className={product.id === parseInt(id) ? "md:basis-1/4 filter" : "md:basis-1/4 no-filter"}>
+          
           <div className="p-1">
+          
             <Card className="border-none">
               <CardContent className="flex flex-col aspect-square rounded-0 bg-stone-100">
                 <Link href={`/products/${product.id}`}>
@@ -52,4 +56,4 @@ const products = await response.json();
   )
 }
 
-export default Shelf
+export default PdpShelf

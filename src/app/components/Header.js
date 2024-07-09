@@ -24,13 +24,13 @@ const Header = () => {
       </div>
       <div>
         <Drawer>
-          <DrawerTrigger>CART</DrawerTrigger>
+          <DrawerTrigger>CART.</DrawerTrigger>
           <DrawerContent className="px-24">
             <DrawerHeader>
-              <DrawerTitle>CART</DrawerTitle>
+              <DrawerTitle className="text-white">CART</DrawerTitle>
               <DrawerDescription></DrawerDescription>
             </DrawerHeader>
-            <ul className="flex gap-8">
+            <ul className="flex gap-8 bg-white p-8 w-fit">
               {cart.map((product) => {
                 return (
                   <li key={product.id} className="flex flex-col items-center gap-4">
@@ -47,9 +47,9 @@ const Header = () => {
             </ul>
             <DrawerFooter>
             <DrawerClose>
-                <Button variant="outline">Continue shopping</Button>
+                <Button variant="outline" className="text-white underline border-none hover:text-white">Continue shopping</Button>
               </DrawerClose>
-              <Button className="bg-black text-white hover:text-black hover:shadow-none hover:border hover:border-black">Go to checkout</Button>
+              <Link href="/checkout" className="bg-white text-black hover:shadow-none hover:bg-white flex items-center px-4">Go to checkout</Link>
              
             </DrawerFooter>
           </DrawerContent>
