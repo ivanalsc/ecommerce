@@ -15,6 +15,7 @@ import {
   } from "@/components/ui/card"
   import Image from "next/image";
   import Link from "next/link";
+  import "../../app/globals.css"
 
 
   
@@ -25,7 +26,7 @@ const Shelf = async() => {
 const products = await response.json();
 
   return (
-    <Carousel className="w-full bg-white p-8 max-w-7xl m-auto ">
+    <Carousel className="w-full bg-black p-8 max-w-7xl m-auto fadeInUp">
     <CarouselContent>
       {products.map((product) => (
         <CarouselItem key={product.id} className="md:basis-1/4 ">
@@ -37,7 +38,8 @@ const products = await response.json();
                 <Image src={product.image} width={200} height={300} className="max-h-28 object-contain"/>
 
                 </div>
-                <span className="line-clamp-2 min-h-12 mb-4">{product.title}</span>
+                <span className="">BRAND</span>
+                <span className="line-clamp-2 min-h-12 mb-4 text-slate-800">{product.title}</span>
                 <span className="">$ {product.price}</span>
                 </Link>
               </CardContent>

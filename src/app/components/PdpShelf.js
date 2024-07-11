@@ -27,6 +27,8 @@ const products = await response.json();
 
   return (
     <Carousel className="w-full bg-white p-8">
+        <h2 className="text-3xl mb-4">YOU MAY ALSO LIKE</h2>
+
     <CarouselContent>
       {products.map((product) => (
         
@@ -41,7 +43,8 @@ const products = await response.json();
                 <Image src={product.image} width={200} height={300} className="max-h-28 object-contain"/>
 
                 </div>
-                <span className="line-clamp-2 min-h-12 mb-4">{product.title}</span>
+                <span className="">BRAND</span>
+                <span className="line-clamp-2 min-h-12 mb-4 text-slate-800">{product.title}</span>
                 <span className="">$ {product.price}</span>
                 </Link>
               </CardContent>
