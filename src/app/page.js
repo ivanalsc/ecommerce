@@ -11,9 +11,9 @@ export default function Home() {
     <>
     <Header />
 
-      <main className="flex min-h-screen flex-col px-24 pt-12">
+      <main className="flex min-h-screen flex-col px-24 pt-12 overflow-hidden">
       <div>
-        <p className="text-white text-left text-9xl animatedText" >JEWELERY</p>
+        <p className="text-black text-left text-9xl animatedText" >JEWELERY</p>
       </div>
     <Shelf/>
     

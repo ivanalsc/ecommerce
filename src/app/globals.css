@@ -3,7 +3,7 @@
   @tailwind utilities;
 
  body{
-  background: #010101;
+  background: #fff;
  }
  .filter{
 display: none;

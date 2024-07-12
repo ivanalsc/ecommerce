@@ -26,16 +26,22 @@ const Shelf = async() => {
 const products = await response.json();
 
   return (
-    <Carousel className="w-full bg-black p-8 max-w-7xl m-auto fadeInUp">
+    <Carousel className="w-full bg-white p-8 max-w-7xl m-auto fadeInUp">
     <CarouselContent>
       {products.map((product) => (
         <CarouselItem key={product.id} className="md:basis-1/4 ">
           <div className="p-1">
-            <Card className="border-none">
-              <CardContent className="flex flex-col aspect-square rounded-0 bg-stone-100">
+            <Card className="border">
+              <CardContent className="flex flex-col aspect-square rounded-0 bg-white">
                 <Link href={`/products/${product.id}`}>
-                <div className="bg-white w-full p-6 mt-4 mb-4 min-h-48 flex align-center">
-                <Image src={product.image} width={200} height={300} className="max-h-28 object-contain"/>
+                <div className="bg-white w-full pt-8 min-h-48 flex align-center">
+                <Image src={product.image} width={200} height={200} className="max-h-28 object-contain"/>
+
+                </div>
+                <div className="flex justify-center mb-4">
+                <svg width="126" height="10" viewBox="0 0 126 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M63.2491 9.30678L67.7987 4.75718H125.651V4.55039H67.7987L63.2491 0.0524902L58.7512 4.55039H0.692139V4.75718H58.7512L63.2491 9.30678ZM63.2491 0.36269L67.5919 4.65378L63.2491 8.99658L58.9063 4.65378L63.2491 0.36269Z" fill="#555555"/>
+</svg>
 
                 </div>
                 <span className="">BRAND</span>
@@ -48,8 +54,7 @@ const products = await response.json();
         </CarouselItem>
       ))}
     </CarouselContent>
-    <CarouselPrevious />
-    <CarouselNext />
+   
   </Carousel>
   )
 }
