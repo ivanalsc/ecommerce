@@ -26,7 +26,7 @@ const Shelf = async() => {
 const products = await response.json();
 
   return (
-    <Carousel className="w-full bg-white p-8 max-w-7xl m-auto fadeInUp">
+    <Carousel className="w-full bg-white p-8 max-w-7xl fadeInUp md:m-auto">
     <CarouselContent>
       {products.map((product) => (
         <CarouselItem key={product.id} className="md:basis-1/4 ">
@@ -35,7 +35,7 @@ const products = await response.json();
               <CardContent className="flex flex-col aspect-square rounded-0 bg-white">
                 <Link href={`/products/${product.id}`}>
                 <div className="bg-white w-full pt-8 min-h-48 flex align-center">
-                <Image src={product.image} width={200} height={200} className="max-h-28 object-contain"/>
+                <Image src={product.image} width={200} height={200} className="max-h-28 object-contain duration-300 hover:scale-110"/>
 
                 </div>
                 <div className="flex justify-center mb-4">

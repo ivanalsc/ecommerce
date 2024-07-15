@@ -29,7 +29,7 @@ console.log("Acá id", id)
 };
 
   return (
-    <div className="px-24 pt-8 text-black flex justify-between">
+    <div className=" px-8 pt-8 text-black flex justify-between items-center md:px-24">
       <div className="p-4">
         <Link href="/">J.</Link>
       </div>

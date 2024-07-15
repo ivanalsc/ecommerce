@@ -31,13 +31,14 @@ const ProductPage = async({params}) => {
     <div className="text-black w-4/5 m-auto pt-8">
        
        <p className="text-6xl">{product.title}</p>
-       <div className="bg-white flex align-start px-16 pt-32 pb-8 gap-8 justify-around">
+       <div className="bg-white flex flex-col align-start pt-16 pb-8 gap-8 justify-around md:flex-row md:px-16">
            <div className="flex align-center">
-           <Image src={product.image} width={400} height={300} alt={product.title} />
+           <Image src={product.image} width={400} height={300} alt={product.title}  className="object-contain"/>
 
            </div>
-           <div className="text-black flex flex-col gap-8">
+           <div className="text-black flex flex-col gap-8 border p-8">
             <p>BRAND</p>
+            <p className="text-stone-700 max-w-80 italic">{product.description}</p>
                <p className="flex">{product.rating.rate}
                  <span>
                <svg height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><path d="m7.5 11.5-5 3 2-5.131-4-3.869h5l2-5 2 5h5l-4 4 2 5z" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" transform="translate(3 3)"/></svg>
@@ -45,7 +46,7 @@ const ProductPage = async({params}) => {
                <p>$ {product.price}</p>
                <AddToCart id={product.id} title={product.title} image={product.image} price={ product.price} />
           
-               <Accordion type="single" collapsible className="min-w-80">
+               <Accordion type="single" collapsible className="md:min-w-80">
   <AccordionItem value="item-1">
     <AccordionTrigger>
       <span className="flex justify-start gap-4">

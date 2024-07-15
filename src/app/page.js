@@ -13,7 +13,7 @@ export default function Home() {
 
       <main className="flex min-h-screen flex-col px-24 pt-12 overflow-hidden">
       <div>
-        <p className="text-black text-left text-9xl animatedText" >JEWELERY</p>
+        <p className="text-black text-left text-5-xl md:text-9xl animatedText" >JEWELERY</p>
       </div>
     <Shelf/>
     
