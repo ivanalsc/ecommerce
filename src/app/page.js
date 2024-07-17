@@ -1,12 +1,19 @@
+
 import Shelf from "./components/Shelf";
 import Header from "./components/Header";
 import Image from "next/image";
 import "./globals.css";
+import Banners from "./components/Banners";
+import Banners2 from "./components/Banners-2";
+
 
 
 
 
 export default function Home() {
+
+
+ 
   return (
     <>
     <Header />
@@ -18,6 +25,9 @@ export default function Home() {
     <Shelf/>
     
     </main>
+   <Banners />
+   <Banners2 />
+ 
     <div className="flex px-24 m-auto justify-center mt-4 fadeInUp">
       <Image src="/3.jpg" width={455} height={400} className="grayscale hover:filter-none"/>
       <Image src="/1.jpeg" width={250} height={400}className="grayscale hover:filter-none"/>

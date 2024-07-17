@@ -1,3 +1,4 @@
+
 import { AddToCart } from "@/app/components/AddToCart";
 import Image from "next/image";
 import Header from "../../components/Header";
