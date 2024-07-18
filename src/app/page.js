@@ -5,6 +5,7 @@ import Image from "next/image";
 import "./globals.css";
 import Banners from "./components/Banners";
 import Banners2 from "./components/Banners-2";
+import AnimatedImage from "./components/AnimatedImage";
 
 
 
@@ -27,23 +28,27 @@ export default function Home() {
     </main>
    <Banners />
    <Banners2 />
- 
-    <div className="flex px-24 m-auto justify-center mt-4 fadeInUp">
-      <Image src="/3.jpg" width={455} height={400} className="grayscale hover:filter-none"/>
-      <Image src="/1.jpeg" width={250} height={400}className="grayscale hover:filter-none"/>
+   <div className="flex px-24 m-auto justify-center mt-4">
+    <AnimatedImage src="/9.jpg" width={455} height={400} className="flex w-full mt-4 justify-start" />
 
-      <Image src="/5.jpg" width={455} height={400} className="grayscale hover:filter-none" />
+   </div>
+   <div className="flex px-24 m-auto justify-center mt-4">
+    <AnimatedImage src="/1.jpeg" width={300} height={300} className="flex w-full mt-4 justify-center" />
 
+   </div>
+   <div className="flex px-24 m-auto justify-center mt-4">
+    <AnimatedImage src="/rings.jpg" width={455} height={400} className="flex w-full mt-4 justify-end" />
 
-    </div>
-    <div className="flex px-24 m-auto mt-4 justify-center fadeInUp">
-      <Image src="/6.jpg" width={255} height={400} className="grayscale hover:filter-none"/>
-      <Image src="/9.jpg" width={658} height={400}className="grayscale hover:filter-none"/>
+   </div>
+   <div className="flex px-24 m-auto justify-center mt-4">
+    <AnimatedImage src="/earrings.jpg" width={300} height={300} className="flex w-full mt-4 justify-center" />
 
-      <Image src="/8.jpg" width={255} height={400} className="grayscale hover:filter-none" />
+   </div>
+   <div className="flex px-24 m-auto justify-center mt-4 pb-16">
+    <AnimatedImage src="/7.jpg" width={455} height={400} className="flex w-full mt-4 justify-start" />
 
+   </div>
 
-    </div>
     </>
   
   );
